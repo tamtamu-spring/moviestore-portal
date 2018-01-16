@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div class="header" th:fragment="navbar">
+    <div class="header_resize">
+        <img src="css/images/logo.png" style="width:200px;float: left"/>
+        <div class="logo">
+            <h1><a href="index.html">movies store</a></h1>
+        </div>
+
+        <div class="clr"></div>
+        <div class="menu_nav">
+            <ul>
+                <li class="active"><a href="/listall"><span>List all movies</span></a></li>
+                <li><a href="support.html"><span>Find movies by category</span></a></li>
+                <li><a href="about.html"><span>Find movies by actor</span></a></li>
+                <li><a href="blog.html"><span>Find movies by language</span></a></li>
+                <li><a href="contact.html"><span>Find movies by tittle</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
