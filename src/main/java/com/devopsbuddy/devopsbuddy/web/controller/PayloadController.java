@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PayloadController {
 
-    public static final String PAYLOAD_VIEW_NAME="payload";
+    public static final String PAYLOAD_VIEW_NAME="index";
 
     @RequestMapping("/payload")
     public String payload()

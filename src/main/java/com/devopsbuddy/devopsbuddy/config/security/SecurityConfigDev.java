@@ -56,7 +56,7 @@ public class SecurityConfigDev extends WebSecurityConfigurerAdapter {
                 .formLogin().loginPage("/login")
                 .usernameParameter("userName")
                 .passwordParameter("user_password")
-                .defaultSuccessUrl("/payload")
+                .defaultSuccessUrl("/")
                 .failureUrl("/login?error").permitAll()
                 .and()
                 .logout().permitAll();
