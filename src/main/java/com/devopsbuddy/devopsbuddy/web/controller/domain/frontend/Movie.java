@@ -20,11 +20,15 @@ public class Movie {
     @Column(name = "release_year")
     private String releaseYear;
 
-    @Column(name = "language_id")
-    private Integer languageId;
+
+    @OneToOne
+    @JoinColumn(name = "language_id")
+    private Language language;
 
     @Column(name = "original_language_id",nullable = true)
     private  Integer originalLanguageId;
+
+
 
     public int getOriginalLanguageId() {
         return originalLanguageId;
@@ -104,12 +108,12 @@ public class Movie {
         this.releaseYear = releaseYear;
     }
 
-    public int getLanguageId() {
-        return languageId;
+    public Language getLanguage() {
+        return language;
     }
 
-    public void setLanguageId(int languageId) {
-        this.languageId = languageId;
+    public void setLanguageId(Language language) {
+        this.language = language;
     }
 
     public int getRentalDuration() {
@@ -147,7 +151,7 @@ public class Movie {
                 ", tittle='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", releaseYear='" + releaseYear + '\'' +
-                ", languageId=" + languageId +
+                ", languageId=" + language +
                 ", originalLanguageId=" + originalLanguageId +
                 ", rentalDuration=" + rentalDuration +
                 ", rentalRate=" + rentalRate +
